@@ -1,4 +1,5 @@
 import React from 'react'
+import useFetch from '../../useFetch';
 
 import { Checkbox, Container, FormControl, FormControlLabel, FormLabel, Typography } from '@material-ui/core'
 import { Button } from '@material-ui/core'
@@ -8,6 +9,8 @@ import { TextField } from '@material-ui/core';
 import { useState } from 'react';
 import { Radio, RadioGroup } from '@material-ui/core';
 import { Category } from '@material-ui/icons';
+import { useHistory } from 'react-router';
+
 
 const useStyles = makeStyles({
     field: {
@@ -18,6 +21,8 @@ const useStyles = makeStyles({
 })
 
 const Create = () => {
+    const history = useHistory()
+
     const [title, setTitle] = useState('')
     const [details, setDetails ] = useState('')
     const [category, setCategory] = useState('work')
@@ -30,7 +35,6 @@ const Create = () => {
         setTitleError(false)
         setDetailsError(false)
 
-        console.log(details, title, category);
         if(title == '') {
             setTitleError(true)
         }
@@ -38,6 +42,15 @@ const Create = () => {
         if(details == '') {
             setDetailsError(true)
         }
+        if(title && details) {
+            fetch('http://localhost:8000/notes', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({title, details, category})
+            })
+            .then(() => history.push('/'))
+        }
+
     }
 
     return (
@@ -70,13 +83,13 @@ const Create = () => {
                 error={detailsError}
             />
             <FormControl className={classes.field}>
-            <RadioGroup value={category} onChange={(e) => {setCategory(e.target.value)}}>
-                <FormLabel>Note Category</FormLabel>
-                <FormControlLabel value='work' control={<Radio/>} label='Work'/>
-                <FormControlLabel value='todos' control={<Radio/>} label='Todos'/>
-                <FormControlLabel value='reminders' control={<Radio/>} label='Reminders'/>
-                <FormControlLabel value='shopping' control={<Radio/>} label='Shopping'/>
-            </RadioGroup>
+                <RadioGroup value={category} onChange={(e) => {setCategory(e.target.value)}}>
+                    <FormLabel>Note Category</FormLabel>
+                    <FormControlLabel value='work' control={<Radio/>} label='Work'/>
+                    <FormControlLabel value='todos' control={<Radio/>} label='Todos'/>
+                    <FormControlLabel value='reminders' control={<Radio/>} label='Reminders'/>
+                    <FormControlLabel value='shopping' control={<Radio/>} label='Shopping'/>
+                </RadioGroup>
             </FormControl>
     
             <Button endIcon={<ArrowForwardIosOutlinedIcon />}  type='submit' color='secondary' variant='contained'>Submit</Button>
