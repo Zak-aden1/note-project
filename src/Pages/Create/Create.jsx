@@ -54,8 +54,13 @@ const Create = () => {
     }
 
     return (
-        <Container>
-            <Typography  variant='h6' component='h2' gutterBottom color='textSecondary'>
+        <Container size='sm'>
+            <Typography  
+            variant='h6' 
+            component='h2' 
+            gutterBottom 
+            color='textSecondary'
+            >
                 Create A New Note
             </Typography>
 
@@ -64,10 +69,10 @@ const Create = () => {
                 onChange={(e) => {setTitle(e.target.value)}}
                 className={classes.field}
                 label='Note Title'
-                fullWidth
                 color='secondary'
-                required
                 variant='outlined'
+                fullWidth
+                required
                 error={titleError}
                 />
             <TextField 
@@ -92,8 +97,15 @@ const Create = () => {
                 </RadioGroup>
             </FormControl>
     
-            <Button endIcon={<ArrowForwardIosOutlinedIcon />}  type='submit' color='secondary' variant='contained'>Submit</Button>
+            <Button 
+                endIcon={<ArrowForwardIosOutlinedIcon />}  type='submit' 
+                color='secondary'
+                variant='contained'
+                >
+                    Submit
+            </Button>
             </form>
+
         </Container>
     )
 }
