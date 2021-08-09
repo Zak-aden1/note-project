@@ -19,12 +19,6 @@
       "id": 3
     },
     {
-      "title": "money affi mek",
-      "details": "kick down door, run up in house, tek food",
-      "category": "reminders",
-      "id": 4
-    },
-    {
       "title": "hello",
       "details": "cnca",
       "category": "money",
@@ -32,9 +26,27 @@
     },
     {
       "title": "hustle",
-      "details": "all of a sudden tnd adn dneaod dn dadda",
-      "category": "money",
+      "details": "10 bands, 50 bandz, holla if any nigga want in man",
+      "category": "work",
       "id": 7
+    },
+    {
+      "title": "shopping for tuesday",
+      "details": "buy milk accsacsacaca",
+      "category": "shopping",
+      "id": 9
+    },
+    {
+      "title": "yoo my g",
+      "details": "csbdibc abasuic uaibsc abciuabc iasbci sabc asui bca",
+      "category": "shopping",
+      "id": 10
+    },
+    {
+      "title": "just like da",
+      "details": "dniau csinua incasi c as a",
+      "category": "work",
+      "id": 11
     }
   ]
 }

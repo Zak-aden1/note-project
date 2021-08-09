@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import {  ThemeProvider } from '@material-ui/core';
-import { createTheme } from '@material-ui/core/styles';
+import {  ThemeProvider, createTheme } from '@material-ui/core';
 import Create from './Pages/Create';
 import Notes from './Pages/Notes';
 import { purple } from '@material-ui/core/colors';
@@ -11,9 +10,12 @@ const theme = createTheme({
   pallete: {
     secondary: purple,
   },
-  typgraphy: {
-      fontFamily: 'quickSand'
-    }
+  typography: {
+    fontFamily: 'Quicksand',
+    fontWeightLight: 400, 
+    fontWeightRegular: 500,
+    fontWeightBold: 600,
+  }
 })
 
 const App = () => {
