@@ -13,40 +13,28 @@
       "id": 2
     },
     {
-      "title": "Order a pizza!",
-      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "todos",
-      "id": 3
+      "title": "one two three",
+      "details": "four five six",
+      "category": "shopping",
+      "id": 4
     },
     {
-      "title": "hello",
-      "details": "cnca",
-      "category": "money",
+      "title": "please hire me",
+      "details": "Everyday when you're walking down the street, everybody that you meet\nHas an original point of view\nAnd I say HEY! what a wonderful kind of day.\nWhere you can learn to work and playAnd get along with each other You got to listen to your heart Listen to the beat Listen to the rhythm, the rhythm of the street Open up your eyes, open up your ears Get together and make things better by working together It's a simple message and it comes from the heart Believe in youself (echo: believe in yourself) Well thats the place to start (to start) And I say HEY! what a wonderful kind of day Where you learn to work and play And get along with each other\n",
+      "category": "work",
+      "id": 5
+    },
+    {
+      "title": "birthday bash",
+      "details": "one two three four five six sseven eight nine toadwad ad a duisa dohsado hdsh iud aiud isuad uhdaish iadsh. daisdhadas dsda asd. add a sa as ds ads ds sda d asd a d ad f sd fa f ads d as da da sd asd as d asd sa dasddasdsa",
+      "category": "todos",
       "id": 6
     },
     {
-      "title": "hustle",
-      "details": "10 bands, 50 bandz, holla if any nigga want in man",
-      "category": "work",
+      "title": "eyyyy",
+      "details": "nicnsncaonsonaicnioasncionaoicnoianosnocac",
+      "category": "shopping",
       "id": 7
-    },
-    {
-      "title": "shopping for tuesday",
-      "details": "buy milk accsacsacaca",
-      "category": "shopping",
-      "id": 9
-    },
-    {
-      "title": "yoo my g",
-      "details": "csbdibc abasuic uaibsc abciuabc iasbci sabc asui bca",
-      "category": "shopping",
-      "id": 10
-    },
-    {
-      "title": "just like da",
-      "details": "dniau csinua incasi c as a",
-      "category": "work",
-      "id": 11
     }
   ]
 }

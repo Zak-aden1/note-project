@@ -25,7 +25,7 @@ const useFetch = (url) => {
         setIspending(false)
     })
     }, [url])
-    return {notes, ispending, error}
+    return {notes, setNotes, ispending, error}
 }
 
 export default useFetch

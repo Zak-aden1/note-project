@@ -32,16 +32,13 @@ import { blue, green, pink, red } from '@material-ui/core/colors'
         
     })
 
-const NoteCard = ({note}) => {
-    const [avLetter, setAvLetter] =useState()
+const NoteCard = ({note, handleDelete}) => {
+    // const [avLetter, setAvLetter] =useState()
+    const [test, setTest] =useState(true)
 
     const classes = useStyles(note)
 
-    const handleDelete = (id) => {
-        fetch('http://localhost:8000/notes/' + id, {
-            method: 'DELETE'
-        }) 
-    }
+    
 
 
     
