@@ -5,6 +5,7 @@ import Create from './Pages/Create';
 import Notes from './Pages/Notes';
 import { purple } from '@material-ui/core/colors';
 import Layout from './Layout';
+import UserContext from './context/UserContext';
 
 const theme = createTheme({
   pallete: {
@@ -21,6 +22,7 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
+      <UserContext>
     <Router>
       <Layout>
       <Switch>
@@ -36,6 +38,7 @@ const App = () => {
       </Switch>
       </Layout>
     </Router>
+    </UserContext>
     </ThemeProvider>
   );
 }

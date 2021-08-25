@@ -10,11 +10,12 @@ const Notes = () => {
     
     
 
-  const {notes, setNotes, ispending, error}=useFetch('http://localhost:8000/notes')
+  const {notes, setNotes, ispending, error}=useFetch('http://localhost:8080/notes')
 
+  console.log(notes)
 
   const handleDelete = (id) => {
-        fetch('http://localhost:8000/notes/' + id, {
+        fetch('http://localhost:8080/delete/' + id, {
             method: 'DELETE'
         }) 
         const newNotes = notes.filter(note => note.id != id)
@@ -40,7 +41,7 @@ const Notes = () => {
                 {notes.map((note) => (
                     // <Grid key={note.id} item xs={12} md={6} lg={4}>
                     <div key={note.id}>
-                        <NoteCard  note={note}/>
+                        <NoteCard handleDelete={handleDelete}  note={note}/>
                     </div>
                 ))}
                 </Masonry>

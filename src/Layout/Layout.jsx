@@ -7,6 +7,8 @@ import { AddCircleOutlineOutlined, SubjectOutlined } from '@material-ui/icons'
 import { useHistory, useLocation } from 'react-router'
 import { AppBar, Toolbar } from '@material-ui/core'
 import { format } from 'date-fns'
+import { useContext } from 'react'
+import UserContext from '../context/UserContext'
 
 const drawerWidth = 240
 
@@ -65,6 +67,11 @@ const Layout = ({children}) => {
         }
     ]
 
+    // const userContext = useContext(UserContext);
+    // console.log(userContext);
+    // const { user, signIn, signOut } = userContext;
+
+    // const ShowUserName = user ? user.displayName : 'guest';
     
 
     return (
@@ -76,7 +83,7 @@ const Layout = ({children}) => {
                          today is the {format(new Date(), 'do MMMM Y')}
                     </Typography>
                     <Typography>
-                        User
+                        {/* {ShowUserName} */}
                     </Typography>
                     <Avatar className={classes.avatar}>Z</Avatar>
                 </Toolbar>
